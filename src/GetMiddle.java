@@ -1,3 +1,7 @@
+// Obtain the middle character of user inputted string
+// If string length is even, return the two middle characters
+// If string length is odd, return middle character
+
 import java.util.Scanner;
 
 public class GetMiddle {
@@ -7,17 +11,17 @@ public class GetMiddle {
         String str = scanner.nextLine();
         System.out.printf("The middle character in the string: %s%n",middle(str));
     }
-    public static String middle(String str) {
+    public static String middle(String word) {
         int position;
         int length;
-        if(str.length() % 2 == 0) {
-            position = str.length() / 2 - 1;
+        if(word.length() % 2 == 0) {
+            position = word.length() / 2 - 1;
             length = 2;
         } else {
-            position = str.length() / 2;
+            position = word.length() / 2;
             length = 1;
         }
-        return str.substring(position, position + length);
+        return word.substring(position, position + length);
     }
 
 
